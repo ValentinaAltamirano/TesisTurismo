@@ -6,67 +6,9 @@
   <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body >
-	<nav class="relative px-4 py-4 flex justify-between items-center bg-gray-800">
-
-		<a class="text-3xl font-bold leading-none" href="">
-      <img src="assets/logo.png" alt="logo">
-		</a>
-
-
-		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-10 uppercase">
-			<li><a class="text-sm text-white hover:text-gray-300" href="">Inicio</a></li>
-			<li><a class="text-sm text-white hover:text-gray-300" href="/alojamiento">Alojamiento</a></li>
-			<li><a class="text-sm text-white hover:text-gray-300" href="/gastronomia">Gastronomía</a></li>
-			<li><a class="text-sm text-white hover:text-gray-300" href="/comercio">Comercio</a></li>
-		</ul>
-
-		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="/inicioSesion">Iniciar Sesión</a>
-		<a class="hidden lg:inline-block py-2 px-6 bg-red-500 hover:bg-red-800 text-sm text-white font-bold rounded-xl transition duration-200" href="/registrarse">Registrarse</a>
-	</nav>
-</body>
-
-<script>
-// Burger menus
-document.addEventListener('DOMContentLoaded', function() {
-    // open
-    const burger = document.querySelectorAll('.navbar-burger');
-    const menu = document.querySelectorAll('.navbar-menu');
-
-    if (burger.length && menu.length) {
-        for (var i = 0; i < burger.length; i++) {
-            burger[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-
-    // close
-    const close = document.querySelectorAll('.navbar-close');
-    const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-    if (close.length) {
-        for (var i = 0; i < close.length; i++) {
-            close[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-
-    if (backdrop.length) {
-        for (var i = 0; i < backdrop.length; i++) {
-            backdrop[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-});
-</script>
+    
+    </body>
+   
 </html>
 
 <router-outlet></router-outlet>

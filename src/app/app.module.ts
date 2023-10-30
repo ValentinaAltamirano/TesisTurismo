@@ -12,6 +12,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
 import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes=[
   {path:'', component: InicioComponent},
@@ -33,7 +34,8 @@ const appRoutes: Routes=[
     RegistrarseComponent,
     InicioComponent,
     ErrorComponent,
-    FooterComponent
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
