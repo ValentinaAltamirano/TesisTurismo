@@ -13,16 +13,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RegistroEmpresarioComponent } from './registro-empresario/registro-empresario.component';
+import {GoogleMapsModule } from '@angular/google-maps';
 
-const appRoutes: Routes=[
-  {path:'', component: InicioComponent},
-  {path:'alojamiento', component:AlojamientoComponent},
-  {path:'gastronomia', component:GastronomiaComponent},
-  {path:'comercio', component:ComerciosComponent},
-  {path: 'inicioSesion', component: InicioSesionComponent},
-  {path: 'registrarse', component: RegistrarseComponent},
-  {path: '**', component: ErrorComponent}
-];
+const appRoutes: Routes=[];
 
 @NgModule({
   declarations: [
@@ -35,12 +29,14 @@ const appRoutes: Routes=[
     InicioComponent,
     ErrorComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    RegistroEmpresarioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
