@@ -8,6 +8,7 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { ErrorComponent } from './error/error.component';
 import { RegistroEmpresarioComponent } from './registro-empresario/registro-empresario.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'inicioSesion', component: InicioSesionComponent},
   {path: 'registrarse', component: RegistrarseComponent},
   {path: 'registroEmpresario', component: RegistroEmpresarioComponent},
+  {path: 'perfil', component: PerfilComponent},
   {path: '**', component: ErrorComponent}
 ];
 

@@ -15,6 +15,9 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegistroEmpresarioComponent } from './registro-empresario/registro-empresario.component';
 import {GoogleMapsModule } from '@angular/google-maps';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const appRoutes: Routes=[];
 
@@ -31,12 +34,15 @@ const appRoutes: Routes=[];
     FooterComponent,
     NavbarComponent,
     RegistroEmpresarioComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    GoogleMapsModule
+    GoogleMapsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

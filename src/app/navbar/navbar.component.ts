@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../service/auth.service';
+import { Router } from '@angular/router';
+import { Collapse, Dropdown, initTE } from 'tw-elements';
 
 @Component({
   selector: 'app-navbar',
@@ -45,6 +48,27 @@ export class NavbarComponent implements OnInit {
         });
       }
     }
+    
+      initTE({ Collapse, Dropdown });
+  }
+
+  isAuthenticated: boolean = false;
+
+  constructor(public authService: AuthService, 
+    private router: Router) {
+      this.isAuthenticated = authService.isAuthenticatedUser();
+    }
+
+    
+  redirectToLogin() {
+    this.router.navigate(['/login']);
+  }
+
+  logout(): void {
+    // Lógica para cerrar sesión, por ejemplo, eliminando tokens o eliminando la sesión.
+    this.isAuthenticated = false;
+    this.authService.isAuthenticated = false;
+    window.location.reload();
   }
   
 }

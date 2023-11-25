@@ -14,14 +14,62 @@
     </div>
 
     <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-10 uppercase">
-    <li><a class="text-sm text-white hover:text-gray-300" href="">Inicio</a></li>
-    <li><a class="text-sm text-white hover:text-gray-300" href="/alojamiento">Alojamiento</a></li>
-    <li><a class="text-sm text-white hover:text-gray-300" href="/gastronomia">Gastronomía</a></li>
-    <li><a class="text-sm text-white hover:text-gray-300" href="/comercio">Comercio</a></li>
+    <li><a class="text-sm text-white hover:text-gray-300  font-medium" href="">Inicio</a></li>
+    <li><a class="text-sm text-white hover:text-gray-300 font-medium" href="/alojamiento">Alojamiento</a></li>
+    <li><a class="text-sm text-white hover:text-gray-300 font-medium" href="/gastronomia">Gastronomía</a></li>
+    <li><a class="text-sm text-white hover:text-gray-300 font-medium" href="/comercio">Comercio</a></li>
 </ul>
 
-<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="/inicioSesion">Iniciar Sesión</a>
-<a class="hidden lg:inline-block py-2 px-6 bg-red-500 hover:bg-red-800 text-sm text-white font-bold rounded-xl transition duration-200" href="/registrarse">Registrarse</a>
+<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="/inicioSesion" *ngIf="!isAuthenticated">Iniciar Sesión</a>
+<a class="hidden lg:inline-block py-2 px-6 bg-red-500 hover:bg-red-800 text-sm text-white font-bold rounded-xl transition duration-200" href="/registrarse" *ngIf="!isAuthenticated">Registrarse</a>
+
+<div
+  class="relative px-6"
+  data-te-dropdown-ref
+  data-te-dropdown-alignment="end"  *ngIf="isAuthenticated"
+>
+  <!-- Second dropdown trigger -->
+  <a
+    class="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
+    href="#"
+    id="dropdownMenuButton2"
+    role="button"
+    data-te-dropdown-toggle-ref
+    aria-expanded="false"
+  >
+    <!-- User avatar -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  </a>
+  <!-- Second dropdown menu -->
+  <ul
+    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+    aria-labelledby="dropdownMenuButton2"
+    data-te-dropdown-menu-ref
+  >
+    <!-- Second dropdown menu items -->
+    <li>
+      <a
+        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+        href="/perfil"
+        data-te-dropdown-item-ref
+        >Mi Perfil</a
+      >
+    </li>
+    <li>
+      <a
+        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+        href="#"
+        data-te-dropdown-item-ref  (click)="logout()"
+        >Cerrar Sesión</a
+      >
+    </li>
+    
+  </ul>
+</div>
+
+
 </nav>
 
 <div class="navbar-menu relative z-50 hidden">
@@ -61,5 +109,73 @@
             </div>
            
         </div>
+
+    <div class="relative"
+  data-te-dropdown-ref
+  data-te-dropdown-alignment="end">
+  <!-- First dropdown trigger -->
+  <a
+    class="hidden-arrow mr-4 flex items-center text-neutral-600 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+    href="#"
+    id="dropdownMenuButton1"
+    role="button"
+    data-te-dropdown-toggle-ref
+    aria-expanded="false"
+  >
+    <!-- Dropdown trigger icon -->
+    <span class="[&>svg]:w-5">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="h-5 w-5"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </span>
+    <!-- Notification counter -->
+    <span
+      class="absolute -mt-4 ml-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white"
+    >1</span>
+  </a>
+  <!-- First dropdown menu -->
+  <ul
+    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+    aria-labelledby="dropdownMenuButton1"
+    data-te-dropdown-menu-ref
+  >
+    <!-- First dropdown menu items -->
+    <li>
+      <a
+        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+        href="#"
+        data-te-dropdown-item-ref
+      >Action</a
+      >
+    </li>
+    <li>
+      <a
+        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+        href="#"
+        data-te-dropdown-item-ref
+      >Another action</a
+      >
+    </li>
+    <li>
+      <a
+        class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+        href="#"
+        data-te-dropdown-item-ref
+      >Something else here</a
+      >
+    </li>
+  </ul>
+    </div>
+    
+    
     </nav>
 </div>

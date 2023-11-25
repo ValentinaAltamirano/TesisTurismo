@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+
+<div class="bg-gray-50 px-6 py-14">
+    
+    <div class="container max-w-screen-md mx-auto shadow dark:border p-10">
+        <form>
+            <div class="space-y-12">
+              <div class="border-b border-gray-900/10 pb-12">
+                <h2 class="text-base font-semibold leading-7 text-gray-900">Editar Perfil Empresario</h2>
+          
+                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                  <div class="sm:col-span-4">
+                    <label for="nombre" class="block text-sm font-medium leading-6 text-gray-900">Nombre Responsable</label>
+                    <div class="mt-2">
+                      <input type="text" name="nombre" id="nombre" autocomplete="nombre" class="block w-full  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-1">
+                    </div>
+                  </div>
+          
+                  <div class="sm:col-span-4">
+                    <label for="apellido" class="block text-sm font-medium leading-6 text-gray-900">Apellido Responsable</label>
+                    <div class="mt-2">
+                      <input type="text" name="apellido" id="apellido" autocomplete="apellido" class="block w-full  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-1">
+                    </div>
+                  </div>
+          
+                  <div class="sm:col-span-4">
+                    <label for="razonSocial" class="block text-sm font-medium leading-6 text-gray-900">Razón Social</label>
+                    <div class="mt-2">
+                      <input type="text" name="razonSocial" id="razonSocial" autocomplete="razonSocial" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-1">
+                    </div>
+                  </div>
+          
+                  <div class="sm:col-span-4">
+                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                    <div class="mt-2">
+                      <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-1">
+                    </div>
+                  </div>
+          
+                  <div class="sm:col-span-4">
+                    <label for="telefono" class="block text-sm font-medium leading-6 text-gray-900">Teléfono</label>
+                    <div class="mt-2">
+                        <input type="text" name="telefono" id="telefono" autocomplete="telefono" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-1">
+                      </div>
+                  </div>
+
+                  <div class="sm:col-span-4">
+                    <label for="contraseñaActual" class="block text-sm font-medium leading-6 text-gray-900">Contraseña actual</label>
+                    <div class="mt-2">
+                        <input type="password" name="contraseñaActual" id="contraseñaActual" autocomplete="contraseñaActual" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-1">
+                      </div>
+                  </div>
+
+                  <div class="sm:col-span-4">
+                    <label for="contraseñaNueva" class="block text-sm font-medium leading-6 text-gray-900">Nueva Contraseña</label>
+                    <div class="mt-2">
+                        <input type="password" name="contraseñaNueva" id="contraseñaNueva" autocomplete="contraseñaNueva" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-1">
+                      </div>
+                  </div>
+
+                  <div class="sm:col-span-4">
+                    <label for="constraseñaNueva2" class="block text-sm font-medium leading-6 text-gray-900">Confirme su nueva contraseña</label>
+                    <div class="mt-2">
+                        <input type="password" name="constraseñaNueva2" id="constraseñaNueva2" autocomplete="constraseñaNueva2" class="block  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-1">
+                      </div>
+                  </div>
+          
+                </div>
+              </div>
+          
+            </div>
+          
+            <div class="mt-6 flex items-center justify-end gap-x-6">
+              <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancelar</button>
+              <button type="submit" class="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Guardar</button>
+            </div>
+          </form>
+    </div>
+    
+  </div>
+
+  <app-footer></app-footer>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-registrarse',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./registrarse.component.css']
 })
 export class RegistrarseComponent {
+
+  
 
 }
